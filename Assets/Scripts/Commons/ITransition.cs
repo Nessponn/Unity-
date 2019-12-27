@@ -1,5 +1,7 @@
 ﻿public interface ITransition
 {
     bool Condition();
-    StateObject To();
+    void SetFrom(IStateObject from);
+    IStateObject GetTo();
+    IStateObject GetFrom();
 }

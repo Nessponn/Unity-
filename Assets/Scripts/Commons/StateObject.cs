@@ -4,7 +4,35 @@ using UnityEngine;
 
 public abstract class StateObject : IStateObject
 {
-    public abstract void OnActivate();
-    public abstract void Update();
-    public abstract void OnDeactivate();
+    private ITransition transition;
+    private bool isActivated = false;
+
+    protected abstract void OnActivate();
+    protected abstract void OnUpdate();
+    protected abstract void OnDeactivate();
+
+    public void Activate()
+    {
+        OnActivate();
+        isActivated = true;
+    }
+
+    public void Update()
+    {
+        OnUpdate();
+    }
+
+    public void Deactivate()
+    {
+        OnDeactivate();
+        isActivated = false;
+    }
+
+    public void SetTransition(ITransition transition)
+    {
+        this.transition = transition;
+    }
+
+    public ITransition GetTransition() => transition;
+    public bool GetActivated() => isActivated;
 }

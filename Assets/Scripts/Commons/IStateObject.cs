@@ -1,6 +1,9 @@
 ﻿public interface IStateObject
 {
-    void OnActivate();
+    void Activate();
     void Update();
-    void OnDeactivate();
+    void Deactivate();
+    void SetTransition(ITransition transition);
+    ITransition GetTransition();
+    bool GetActivated();
 }

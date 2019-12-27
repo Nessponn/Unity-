@@ -5,8 +5,8 @@ public class StateMachine<T> where T : class, new()
 {
     private T parent = null;
     private List<StatePack> statePacks = null;
-    private StatePack currentStatePack = null;
-    private StatePack initialStatePack = null;
+    private IStateObject currentStateObject = null;
+    private IStateObject initialStateObject = null;
 
     public StateMachine(T parent)
     {
@@ -16,7 +16,17 @@ public class StateMachine<T> where T : class, new()
 
     public void Update()
     {
-        currentStatePack.GetStateObject().Update();
+        if (!currentStateObject.GetActivated())
+        {
+            currentStateObject.Activate();
+        }
+
+        currentStateObject.Update();
+
+        if (currentStateObject.GetTransition().Condition())
+        {
+            currentStateObject.Deactivate();
+        }
     }
 
     public void End()
@@ -29,16 +39,32 @@ public class StateMachine<T> where T : class, new()
     public void AddStateObject(IStateObject stateObject, ITransition transition)
     {
         var statePack = new StatePack(transition, stateObject);
-        if (initialStatePack == null)
+        transition.SetFrom(stateObject);
+
+        if (currentStateObject == null)
         {
-            initialStatePack = statePack;
+            currentStateObject = stateObject;
         }
 
-        if (currentStatePack == null)
+        if (initialStateObject == null)
         {
-            currentStatePack = statePack;
+            initialStateObject = stateObject;
         }
-
         statePacks.Add(statePack);
+    }
+
+    private void TransitionCurrentState()
+    {
+        if (currentStateObject != null)
+        {
+            currentStateObject = currentStateObject.GetTransition().GetTo();
+        }
+    }
+
+    public void TransitionInitialState()
+    {
+        // 直接Deactivateを呼んでしまう
+        currentStateObject.Deactivate();
+        currentStateObject = initialStateObject;
     }
 }
