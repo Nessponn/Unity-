@@ -1,4 +1,4 @@
-﻿Shader "Card/reversible"
+Shader "Card/reversible"
 {
     Properties
     {
