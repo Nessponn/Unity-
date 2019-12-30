@@ -7,11 +7,13 @@ public class StateMachine<T> where T : class, new()
     private List<StatePack> statePacks = null;
     private IStateObject currentStateObject = null;
     private IStateObject initialStateObject = null;
+    private Dictionary<string, StateParameter> stateParameters;
 
     public StateMachine(T parent)
     {
         this.parent = parent;
         statePacks = new List<StatePack>();
+        stateParameters = new Dictionary<string, StateParameter>();
     }
 
     public void Update()
