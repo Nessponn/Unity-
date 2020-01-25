@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &906440246818214265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 906440246818214242}
+  - component: {fileID: 906440246818214246}
+  - component: {fileID: 906440246818214244}
+  - component: {fileID: 906440246818214245}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &906440246818214242
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906440246818214265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &906440246818214246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906440246818214265}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16773642f3d385645909743567c9121b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cards_Spade:
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  Cards_Heart:
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  Cards_Club:
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  Cards_Diamond:
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  - Cards_Object: {fileID: 0}
+  Oneplayerside:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Twoplayerside:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &906440246818214244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906440246818214265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32eb99fbf59dc554fb49aeae52c19978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cardpos1: {fileID: 0}
+  Cardpos2: {fileID: 0}
+  Cardpos3: {fileID: 0}
+  Cardpos4: {fileID: 0}
+  Cardpos5: {fileID: 0}
+  x: 0
+  y: 0
+  width: 200
+  height: 400
+--- !u!222 &906440246818214245
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906440246818214265}
+  m_CullTransparentMesh: 0
